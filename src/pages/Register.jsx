@@ -54,7 +54,7 @@ setErr(true)
   return (
     <div className='fromContainer'>
       <div className="formWrapper">
-        <span className='logo'>Community</span>
+        <span className='logo'>Chat</span>
         <span className="title">Register</span>
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="display name"/>

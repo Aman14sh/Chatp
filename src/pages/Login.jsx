@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link,useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 import { auth } from '../firebase';
@@ -21,13 +21,12 @@ export default function Login() {
     setErr(true);
   }
   
-  console.log(style)
 };
 
   return (
     <div className='fromContainer'>
       <div className="formWrapper">
-        <span className="logo">Community</span>
+        <span className="logo">Chat</span>
         <span className="title">Login</span>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="email"/>
