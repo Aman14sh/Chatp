@@ -139,16 +139,22 @@
                     object-fit:cover;
                 }
                 button{
-                    background-color:#5d5b8d;
-                    color:#ddddf7;
+                    background-color:white;
+                    color:black;
                     font-size:0.7rem;
-                    border:none;
+                    font-weight: 600;
+                    border-radius: 0.2rem;
+                    
                     cursor:pointer; 
                       @include tablet{
                         position:absolute;
                         bottom:0.7rem;
-                    }  
+                       
+                    }
                 }
+                button:hover{
+                    background-color:lightblue;
+                } 
                 .search{
                     border-bottom: 1px solid grey;
                     .searchForm{
@@ -222,7 +228,7 @@
             background:#ddddf7;
             padding:0.7rem;
             height:calc(100% - 140px);
-            overflow: scroll;
+            overflow: auto;
             .message{
                 display:flex;
                 gap:1.3rem;
