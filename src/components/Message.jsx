@@ -1,3 +1,4 @@
+import { Timestamp } from "firebase/firestore";
 import React, { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
@@ -11,7 +12,8 @@ const Message = ({ message }) => {
   useEffect(() => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
-
+  var d=new Date(message.date.seconds*1000)
+  var dt=d.toLocaleTimeString();
   return (
     <div
       ref={ref}
@@ -26,7 +28,8 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>just now</span>
+        
+        <span>{dt}</span>
       </div>
       <div className="messageContent">
         <p>{message.text}</p>
